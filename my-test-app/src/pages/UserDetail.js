@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom'
 
+// TODO : Props로 데이터 넘겨 받을 수 있지 않을까..?
 function UserDetail() {
     /**
      * Hook state 변수 선언
