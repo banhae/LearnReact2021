@@ -54,17 +54,27 @@ function Users() {
 
     // TODO: map vs foreach
     return (
-        <div className='user-links'>
+        <div>
             <ul>
-                {users.map(({ name, id }) => (
-                    <li key={id}>
-                        <Link to={`${url}/${id}`}>{name}</Link>
-                    </li>
-                ))}
+                {
+                    users.map(user => (
+                        <li key={user.id}>
+                            <Link to={{
+                                pathname: `${url}/${user.id}`,
+                                state: {
+                                    name: user.name,
+                                    username: user.username,
+                                    email: user.email
+                                }
+                            }}>
+                                {user.username}</Link>
+                        </li>
+                    ))
+                }
             </ul>
 
             <Switch>
-                <Route path={`${path}/:userId`}><UserDetail /></Route>
+                <Route path={`${path}/:userId`} component={UserDetail}></Route>
             </Switch>
         </div>
     );
