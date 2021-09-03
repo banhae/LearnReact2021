@@ -1,6 +1,6 @@
 import { Col } from 'react-bootstrap';
 
-const SideMenu = () => {
+const SideBar = () => {
     return (
         <Col xs lg="2">
             <ul>
@@ -12,4 +12,4 @@ const SideMenu = () => {
     );
 }
 
-export default SideMenu;
+export default SideBar;
