@@ -1,22 +1,5 @@
 import { createStore } from "redux";
 
-export const GET_POSTS = "posts/GET_POSTS"
-export const UPDATE_FAVORITE = "posts/UPDATE_FAVORITE"
-
-export const getPosts = {
-    type: GET_POSTS,
-    payload: {
-
-    }
-}
-
-export const updateFavorite = {
-    type: UPDATE_FAVORITE,
-    payload: {
-
-    }
-}
-
 const initState = {
     posts: [
         {
@@ -41,13 +24,29 @@ const initState = {
 }
 
 function reducer(state = initState, action) {
+
     switch (action) {
-        case GET_POSTS:
-            return { ...state, posts: [...state.posts, action.item] };
+        case "posts/postId":
+            return { 
+                ...state,
+                posts: [...state.posts, action.item]
+            }
+        case "posts/postsLoaded" : {
+            return {
+                ...state,
+                entities: action.payload,
+            }
+        }
         default:
             return state;
     }
 }
+
+export const postsLoaded = (posts) =>({
+    type:'posts/postsLoaded',
+    payload: posts,
+})
+
 
 export default createStore(
     reducer,
