@@ -1,13 +1,15 @@
-import Header from '../components/Header'
+import Header from 'components/Header'
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import PostListPage from 'pages/post/PostListPage';
+import PostPage from 'pages/post/PostsPage';
 
 function Root() {
 
     return (
         <Router>
             <Route path="/" component={Header} />
-            <Route path="/posts" component={PostListPage} />
+            {/*PostPage호출*/}
+            <Route path="/posts" component={PostPage} />
+            {/*TODO: FavoritePage 만들기*/}
         </Router>
     );
 }

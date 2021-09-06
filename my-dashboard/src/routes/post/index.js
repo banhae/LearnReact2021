@@ -1,17 +1,21 @@
-import MainPanel from '..//pages/MainPanel'
-import { Switch, Route, useRouteMatch, withRouter } from "react-router-dom";
-import SideMenu from 'pages/SideMenu';
-import PostLists from 'pages/PostLists';
-import PostDetail from 'pages/PostDetail';
+import { BrowserRouter as Router, Route, useRouteMatch, withRouter } from "react-router-dom";
+import PostList from 'components/PostList';
+import PostDetail from 'components/PostDetail';
+import SideBar from "components/SideBar";
+import { useSelector } from "react-redux"
 
 function PostRouter() {
     const { url } = useRouteMatch()
+    const posts = useSelector(state => state.posts);
+
+    console.log(url)
 
     return (
-        <Switch>
-            <Route path={`${url}/`} component={PostLists} />
-            <Route path={`${url}/`} component={PostDetail} />
-        </Switch>
+        <Router>
+            <Route path={`${url}/`} component={SideBar} />
+            <Route path={`${url}/`} render={() => <PostList posts={posts} />} />
+            <Route path={`${url}/:postId`} component={PostDetail} />
+        </Router>
     );
 }
 
