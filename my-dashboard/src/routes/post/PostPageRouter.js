@@ -1,10 +1,10 @@
-import { BrowserRouter as Router, Route, useRouteMatch, withRouter } from "react-router-dom";
+import { BrowserRouter as Router, Route, useRouteMatch } from "react-router-dom";
 import PostList from 'components/PostList';
 import PostDetail from 'components/PostDetail';
 import SideBar from "components/SideBar";
 import { useSelector } from "react-redux"
 
-function PostRouter() {
+function PostPageRouter() {
     const { url } = useRouteMatch()
     const posts = useSelector(state => state.posts);
 
@@ -19,4 +19,4 @@ function PostRouter() {
     );
 }
 
-export default withRouter(PostRouter);
+export default PostPageRouter;

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
 import {
-    Link,
     useRouteMatch
 } from "react-router-dom";
+import PostItem from './PostItem';
 
 const PostList = ({ posts }) => {
     const { url } = useRouteMatch()
@@ -11,15 +11,14 @@ const PostList = ({ posts }) => {
 
         <Col>
             {
-                /* TODO : PostItem 컴포넌트 만들기 */
-                posts.map(post => (
-                    <Link to={`${url}/${post.id}`} key={post.id}>
-                        <h2 >{post.title}</h2>
-                    </Link>
-                ))}
+                posts.map(post =>
+                    (<PostItem key={post.id} post={post} url={url} />)
+                )
+            }
         </Col>
-
     );
 };
+
+// 디폴트 props 필요한가..?
 
 export default PostList;
