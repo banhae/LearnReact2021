@@ -9,13 +9,7 @@ const PostItem = ({ post }) => {
 
     return (
         <div>
-            <Link to={{
-                pathname: `/posts/${post.id}`,
-                // PostDetail 컴포넌트로 포스트 id를 전달하기 위해 사용
-                state: {
-                    postId: post.id,
-                }
-            }}>
+            <Link to={`/posts/${post.id}`}>
                 <Title title={post.title} />
             </Link>
         </div>

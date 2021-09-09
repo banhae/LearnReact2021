@@ -10,10 +10,6 @@ const Title = ({ title }) => {
     );
 };
 
-Title.defaultProps = {
-    title: "Title is empty"
-}
-
 Title.propTypes = {
     title: PropTypes.string.isRequired
 };

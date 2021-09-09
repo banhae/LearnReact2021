@@ -14,8 +14,4 @@ Content.propTypes = {
     Content: PropTypes.string.isRequired
 };
 
-Content.defaultProps = {
-    Content: "Content is empty."
-}
-
 export default Content;
