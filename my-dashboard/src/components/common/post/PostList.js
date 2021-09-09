@@ -1,24 +1,22 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
-import {
-    useRouteMatch
-} from "react-router-dom";
 import PostItem from './PostItem';
 
-const PostList = ({ posts }) => {
-    const { url } = useRouteMatch()
-    return (
+/**
+ * 타입 : 공용 컴포넌트
+ * 용도 : 포스트 리스트를 그리는 컴포넌트
+ */
 
+const PostList = ({ posts }) => {
+    return (
         <Col>
             {
                 posts.map(post =>
-                    (<PostItem key={post.id} post={post} url={url} />)
+                    (<PostItem key={post.id} post={post} />)
                 )
             }
         </Col>
     );
 };
-
-// 디폴트 props 필요한가..?
 
 export default PostList;

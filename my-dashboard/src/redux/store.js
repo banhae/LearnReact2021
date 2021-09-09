@@ -1,6 +1,9 @@
 import { createStore } from "redux";
-
-// 초기 리덕스 데이터
+/**
+ * 타입 : 리듀서, 액션, 스토어
+ * 용도 : 데어터를 중앙 집중관리
+ */
+// 초기 데이터
 const initState = {
     posts: [
         {
@@ -27,7 +30,7 @@ const initState = {
 // TODO : reducer랑 store 분리할 것
 function reducer(state = initState, action) {
 
-    // TODO : 액션 제대로 만들 것
+    // TODO : 액션 코드 분리할 것
     switch (action) {
         case "posts/postId":
             return {
