@@ -4,6 +4,7 @@ import { Col } from 'react-bootstrap';
  * 용도 : 화면 왼쪽에 사이드바를 출력
  */
 const SideBar = () => {
+
     return (
         <Col xs lg="2">
             <ul>
