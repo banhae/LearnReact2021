@@ -16,7 +16,7 @@ const initState = {
             id: 2,
             title: 'dummy2',
             content: 'cla cla cla cla cla cla cla cla cla',
-            favorite: false,
+            favorite: true,
         },
         {
             id: 3,

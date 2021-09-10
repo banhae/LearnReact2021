@@ -7,7 +7,8 @@ import { useSelector } from "react-redux"
  * 용도 : 포스트 리스트를 그리는 컴포넌트
  */
 const PostList = () => {
-
+    // TODO : 
+    // 포스트 리스트를 useSelector를 통해 리덕스에서 받아옴
     const posts = useSelector(state => state.posts);
 
     if (!posts) {

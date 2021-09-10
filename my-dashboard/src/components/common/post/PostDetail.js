@@ -23,7 +23,7 @@ const PostDetail = () => {
             </Col>
         );
     }
-
+    // FIXME : 링크 처음 클릭식 Content propTypes 에러남
     return (
         <Col md="auto">
             <Title title={post.title} />
