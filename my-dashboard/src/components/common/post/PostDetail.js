@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { Col } from 'react-bootstrap';
 import { Title, Content } from 'components/common';
 import { useParams } from "react-router-dom";
+import FavoButton from './FavoButton';
 /**
  * 타입 : 공용 컴포넌트
  * 용도 : 포스트의 상세한 내용을 그리는 컴포넌트
@@ -25,7 +26,8 @@ const PostDetail = () => {
     }
 
     return (
-        <Col md="auto">
+        <Col xs lg="4">
+            <FavoButton favorite={post.favorite} />
             <Title title={post.title} />
             <Content content={post.content} />
         </Col>
