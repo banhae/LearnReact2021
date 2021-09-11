@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 /**
- * 타입 : 공용 컴포넌트
- * 용도 : 포스트 내용을 출력함
+ * Common Comp | 글 내용을 출력
  */
 const Content = ({ content }) => {
 

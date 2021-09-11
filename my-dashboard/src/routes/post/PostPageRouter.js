@@ -1,10 +1,8 @@
 import { Route } from "react-router-dom";
 import { Container, Row } from 'react-bootstrap';
-import { DetailView } from 'components/common/post';
-import { PostPage } from "components/layout";
+import { PostPage, DetailView } from "components/layout";
 /**
- * 타입 : 라우팅 컴포넌트
- * 용도 : Post페이지를 담당하는 라우터
+ * Routing Comp | 글 화면의 라우팅을 담당
  */
 function PostPageRouter() {
     const PATH = "posts";

@@ -3,8 +3,7 @@ import { Col } from 'react-bootstrap';
 import ItemView from './ItemView';
 import { useSelector } from "react-redux"
 /**
- * 타입 : 공용 컴포넌트
- * 용도 : 포스트 리스트를 그리는 컴포넌트
+ * Common Comp | 글 목록을 출력
  */
 const ListView = () => {
     // TODO : 

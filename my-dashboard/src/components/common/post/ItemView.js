@@ -4,8 +4,7 @@ import { Title } from 'components/common';
 import FavoButton from './FavoButton';
 import { Row, Col } from 'react-bootstrap';
 /**
- * 타입 : 공용컴포넌트
- * 용도 : 포스트 목록에 아이템을 그리는 컴포넌트
+ * Common Comp | 글 목록의 각 항목을 출력
  */
 const ItemView = ({ post }) => {
 

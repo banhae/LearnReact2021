@@ -2,11 +2,10 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Col } from 'react-bootstrap';
 import { Title, Content } from 'components/common';
+import { FavoButton } from 'components/common/post';
 import { useParams } from "react-router-dom";
-import FavoButton from './FavoButton';
 /**
- * 타입 : 공용 컴포넌트
- * 용도 : 포스트의 상세한 내용을 그리는 컴포넌트
+ * Layout Comp | 글의 상세 내용을 구성
  */
 const DetailView = () => {
     const props = useParams();

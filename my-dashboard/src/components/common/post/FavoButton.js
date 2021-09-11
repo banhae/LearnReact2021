@@ -4,7 +4,7 @@ import { ReactComponent as Favorite } from 'static/assets/icons/favorite_24dp.sv
 // TODO: 뭐가 더 좋은지...json vs local contant value
 import Colors from 'static/colors.json'
 /**
- * Common Comp | 즐겨찾기 버튼을 그리는 컴포넌트
+ * Common Comp | 즐겨찾기 버튼
  */
 const FavoButton = ({ favorite }) => {
     const [buttonColor, setButtonColor] = useState(null);
