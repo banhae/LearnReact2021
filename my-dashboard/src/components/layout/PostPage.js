@@ -1,12 +1,12 @@
 import React from 'react';
-import { PostList } from 'components/common/post';
+import { ListView } from 'components/common/post';
 import { SideBar } from "components/layout";
 
 const PostPage = () => {
     return (
         <>
             <SideBar />
-            <PostList />
+            <ListView />
         </>
     );
 };

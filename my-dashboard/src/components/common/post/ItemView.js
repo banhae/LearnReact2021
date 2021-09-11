@@ -7,7 +7,7 @@ import { Row, Col } from 'react-bootstrap';
  * 타입 : 공용컴포넌트
  * 용도 : 포스트 목록에 아이템을 그리는 컴포넌트
  */
-const PostItem = ({ post }) => {
+const ItemView = ({ post }) => {
 
     return (
         <div>
@@ -26,4 +26,4 @@ const PostItem = ({ post }) => {
     );
 };
 
-export default PostItem;
+export default ItemView;

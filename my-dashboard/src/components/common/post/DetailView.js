@@ -8,7 +8,7 @@ import FavoButton from './FavoButton';
  * 타입 : 공용 컴포넌트
  * 용도 : 포스트의 상세한 내용을 그리는 컴포넌트
  */
-const PostDetail = () => {
+const DetailView = () => {
     const props = useParams();
     //TODO : action, dispatch를 이용해서 값을 가져 올 것
     // postId 값으로 posts에서 post를 찾아옴
@@ -34,4 +34,4 @@ const PostDetail = () => {
     );
 };
 
-export default PostDetail;
+export default DetailView;

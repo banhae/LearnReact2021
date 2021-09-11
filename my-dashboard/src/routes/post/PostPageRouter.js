@@ -1,6 +1,6 @@
 import { Route } from "react-router-dom";
 import { Container, Row } from 'react-bootstrap';
-import { PostDetail } from 'components/common/post';
+import { DetailView } from 'components/common/post';
 import { PostPage } from "components/layout";
 /**
  * 타입 : 라우팅 컴포넌트
@@ -14,7 +14,7 @@ function PostPageRouter() {
             <Row className="flex-xl-nowrap">
                 <PostPage />
                 {/* PostDetail에 match param을 통해서 posdId를 넘겨주기 위함 */}
-                <Route path={`/${PATH}/:postId`} component={PostDetail} />
+                <Route path={`/${PATH}/:postId`} component={DetailView} />
             </Row>
         </Container>
     );
