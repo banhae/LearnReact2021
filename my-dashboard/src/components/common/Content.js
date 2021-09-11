@@ -5,13 +5,14 @@ import PropTypes from 'prop-types';
  * 용도 : 포스트 내용을 출력함
  */
 const Content = ({ content }) => {
+
     return (
         <p>{content}</p>
     );
 };
 
 Content.propTypes = {
-    Content: PropTypes.string.isRequired
+    content: PropTypes.string.isRequired
 };
 
 export default Content;
