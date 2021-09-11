@@ -18,7 +18,7 @@ const PostList = () => {
     }
 
     return (
-        <Col>
+        <Col xs lg="4">
             {
                 posts.map(post =>
                     (<PostItem key={post.id} post={post} />)
