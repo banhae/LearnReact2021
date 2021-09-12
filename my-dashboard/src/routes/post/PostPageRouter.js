@@ -5,6 +5,7 @@ import { PostPage, DetailView } from "components/layout";
  * Routing Comp | 글 화면의 라우팅을 담당
  */
 function PostPageRouter() {
+    // FIXME : func 밖으로
     const PATH = "posts";
 
     return (

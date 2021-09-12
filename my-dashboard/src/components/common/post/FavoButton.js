@@ -2,9 +2,12 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { ReactComponent as Favorite } from 'static/assets/icons/favorite_24dp.svg';
 // TODO: 뭐가 더 좋은지...json vs local contant value
+// Type manager js?
 import Colors from 'static/colors.json'
 /**
  * Common Comp | 즐겨찾기 버튼
+ * --
+ * @param {*} favorite
  */
 const FavoButton = ({ favorite }) => {
     const [buttonColor, setButtonColor] = useState(null);

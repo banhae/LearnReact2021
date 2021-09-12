@@ -8,6 +8,7 @@ import { useParams } from "react-router-dom";
  * Layout Comp | 글의 상세 내용을 구성
  */
 const DetailView = () => {
+    // FIXME : props외의 다른 이름으로 수정
     const props = useParams();
     //TODO : action, dispatch를 이용해서 값을 가져 올 것
     // postId 값으로 posts에서 post를 찾아옴
