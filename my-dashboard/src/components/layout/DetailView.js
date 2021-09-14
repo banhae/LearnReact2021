@@ -10,11 +10,10 @@ import { useParams } from "react-router-dom";
 const DetailView = () => {
     // FIXME : props외의 다른 이름으로 수정
     const props = useParams();
-    //TODO : action, dispatch를 이용해서 값을 가져 올 것
+    //TODO : custom createSelect를 만들어서 값을 가져 올 것
     // postId 값으로 posts에서 post를 찾아옴
     const post = useSelector((state) =>
-        // TODO : ==을 ===으로 고쳐야함
-        state.posts.find((post) => post.id == props.postId)
+        state.posts.find((post) => post.id === Number(props.postId))
     );
 
     if (!post) {
@@ -25,11 +24,12 @@ const DetailView = () => {
         );
     }
 
+    // FIXME : 즐겨찾기가 해제되도 디테일뷰는 남아있는 버그 수정
     return (
         <Col xs lg="4">
             <FavoButton favorite={post.favorite} postId={post.id} />
             <Title title={post.title} />
-            <Content content={post.content} />
+            <Content body={post.body} />
         </Col>
     );
 };

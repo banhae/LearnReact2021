@@ -5,9 +5,9 @@ import { PostPage, DetailView } from "components/layout";
  * Routing Comp | 글 화면의 라우팅을 담당
  */
 // TODO : contant 값만 따로 분리
-const PATH = "posts";
-function PostPageRouter() {
+const PATH = "favorites";
 
+function FavoPageRouter() {
     return (
         <Container fluid>
             <Row className="flex-xl-nowrap">
@@ -19,4 +19,4 @@ function PostPageRouter() {
     );
 }
 
-export default PostPageRouter;
+export default FavoPageRouter;

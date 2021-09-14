@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 /**
  * Common Comp | 글 내용을 출력
  */
-const Content = ({ content }) => {
+const Content = ({ body }) => {
 
     return (
-        <p>{content}</p>
+        <p>{body}</p>
     );
 };
 
 Content.propTypes = {
-    content: PropTypes.string.isRequired
+    body: PropTypes.string.isRequired
 };
 
 export default Content;

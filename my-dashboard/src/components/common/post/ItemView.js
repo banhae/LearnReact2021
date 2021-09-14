@@ -6,16 +6,17 @@ import { Row, Col } from 'react-bootstrap';
 /**
  * Common Comp | 글 목록의 각 항목을 출력
  */
-const ItemView = ({ post }) => {
-
+// FIXME : 부모 comp에서 path받는 것 외에 다른 방법을 사용할 것
+const ItemView = ({ post, path }) => {
     return (
         <div>
             <Row>
                 <Col xs lg="1">
-                    <FavoButton favorite={post.favorite} postId={post.id} />
+                    {/*FIXME : boolean으로 변환하지 않으면 propsType 에러가 발생함*/}
+                    <FavoButton favorite={Boolean(post.favorite)} postId={post.id} />
                 </Col>
                 <Col>
-                    <Link to={`/posts/${post.id}`}>
+                    <Link to={`/${path}/${post.id}`}>
                         <Title title={post.title} />
                     </Link>
                 </Col>

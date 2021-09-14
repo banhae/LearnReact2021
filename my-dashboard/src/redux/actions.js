@@ -12,3 +12,9 @@ export const postFavoToggled = (postId) => ({
     type: postsActionTypes.postFavoToggled,
     payload: postId
 });
+export const postsFavoInitialize = () => ({ type: postsActionTypes.postsFavoInitialize });
+export const postsLoading = () => ({ type: postsActionTypes.postsLoading });
+export const postsLoaded = (posts) => ({
+    type: postsActionTypes.postsLoaded,
+    payload: posts,
+});

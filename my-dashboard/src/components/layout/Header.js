@@ -12,7 +12,7 @@ const Header = () => {
                 <Navbar.Brand href="/">Dummy title</Navbar.Brand>
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav>
-                        <Nav.Link href="#">Favorites</Nav.Link>
+                        <Nav.Link href="/favorites">Favorites</Nav.Link>
                         <Nav.Link href="/posts">
                             Posts
                         </Nav.Link>

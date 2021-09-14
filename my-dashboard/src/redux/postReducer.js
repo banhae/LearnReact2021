@@ -1,9 +1,12 @@
 import postsActionTypes from "./posts/actionTypes"
+import { createSelector } from 'reselect'
+import { getPosts } from 'APIManger'
+import { postsLoading, postsLoaded, postsFavoInitialize } from "./actions"
+import { filters } from "./posts/filters"
 
-// TODO : JSON Placeholder에서 API호출해서 초기값을 설정할 것
 const initState = {
-    posts: [{ id: 1, title: "raccon1", content: "TMI TMI" },
-    { id: 2, title: "raccon2", content: "CMI CMI" }]
+    filter: filters.none,
+    posts: [],
 }
 /**
  * Redux Reducer | 글의 상태변경 이벤트(Action)를 처리
@@ -26,10 +29,44 @@ const postReducer = (state = initState, action) => {
                 }),
             };
         }
+
+        case postsActionTypes.postsLoading: {
+            return {
+                ...state,
+            };
+        }
+        case postsActionTypes.postsLoaded: {
+            return {
+                ...state,
+                posts: action.payload,
+            };
+        }
+        case postsActionTypes.postsFavoInitialize: {
+            state.posts.forEach((post) => { post.favorite = false; });
+            return state;
+        }
         default:
-            state.posts.forEach((post) => { post.favorite = false })
             return state;
     }
 }
+
+export const fetchPosts = () => async (dispatch) => {
+
+    dispatch(postsLoading());
+
+    const response = await getPosts();
+
+    dispatch(postsLoaded(response));
+    dispatch(postsFavoInitialize());
+}
+
+export const selectAllPosts = (state) => state.posts;
+
+export const selectFavoPost = createSelector(
+    selectAllPosts,
+    (posts) => {
+        return posts.filter((post) => post.favorite)
+    }
+)
 
 export default postReducer;
