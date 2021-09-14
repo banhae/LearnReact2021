@@ -27,7 +27,7 @@ const DetailView = () => {
 
     return (
         <Col xs lg="4">
-            <FavoButton favorite={post.favorite} />
+            <FavoButton favorite={post.favorite} postId={post.id} />
             <Title title={post.title} />
             <Content content={post.content} />
         </Col>

@@ -10,16 +10,16 @@ const ItemView = ({ post }) => {
 
     return (
         <div>
-            <Link to={`/posts/${post.id}`}>
-                <Row>
-                    <Col xs lg="1">
-                        <FavoButton favorite={post.favorite} />
-                    </Col>
-                    <Col>
+            <Row>
+                <Col xs lg="1">
+                    <FavoButton favorite={post.favorite} postId={post.id} />
+                </Col>
+                <Col>
+                    <Link to={`/posts/${post.id}`}>
                         <Title title={post.title} />
-                    </Col>
-                </Row>
-            </Link>
+                    </Link>
+                </Col>
+            </Row>
             <hr />
         </div>
     );

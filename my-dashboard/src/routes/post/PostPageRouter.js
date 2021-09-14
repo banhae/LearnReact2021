@@ -4,9 +4,9 @@ import { PostPage, DetailView } from "components/layout";
 /**
  * Routing Comp | 글 화면의 라우팅을 담당
  */
+// TODO : contant 값만 따로 분리
+const PATH = "posts";
 function PostPageRouter() {
-    // FIXME : func 밖으로
-    const PATH = "posts";
 
     return (
         <Container fluid>

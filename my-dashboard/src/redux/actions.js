@@ -1,3 +1,4 @@
+import postsActionTypes from "./posts/actionTypes"
 /**
  * Redux Action | 글의 상태변경 이벤트(Action)를 정의
  *
@@ -5,5 +6,9 @@
  * 글 목록 로딩
  * 글 목록 로드
  * 글 목록 조회
- * 즐겨찾기 토글
  */
+
+export const postFavoToggled = (postId) => ({
+    type: postsActionTypes.postFavoToggled,
+    payload: postId
+});
